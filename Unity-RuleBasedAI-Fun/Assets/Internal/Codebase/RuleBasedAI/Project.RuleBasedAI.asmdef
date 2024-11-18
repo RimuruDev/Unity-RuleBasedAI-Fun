@@ -1,0 +1,16 @@
+{
+    "name": "Project.RuleBasedAI",
+    "rootNamespace": "RimuruDev",
+    "references": [
+        "GUID:d5eb28e88e16847ba8cf809a49d3b9fa"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
