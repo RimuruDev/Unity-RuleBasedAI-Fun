@@ -16,7 +16,7 @@ namespace RimuruDev.Internal.Codebase.RuleBasedAI.Core
                 if (!rule.CanExecute)
                     continue;
 
-                rule.Execute(); 
+                rule.Execute();
                 return;
             }
         }

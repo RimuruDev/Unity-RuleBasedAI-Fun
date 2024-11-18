@@ -1,4 +1,4 @@
-using RimuruDev.Internal.Codebase.Common.Character;
+using RimuruDev.Internal.Codebase.Common.Characters;
 using RimuruDev.Internal.Codebase.RuleBasedAI.Core;
 
 namespace RimuruDev.Internal.Codebase.RuleBasedAI.Implementation

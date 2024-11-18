@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace RimuruDev.Internal.Codebase.Common.Character
+namespace RimuruDev.Internal.Codebase.Common.Characters
 {
     public class Character : MonoBehaviour
     {

@@ -2,11 +2,23 @@ using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
 
-namespace RimuruDev.Internal.Codebase.Common.Character
+namespace RimuruDev.Internal.Codebase.Common.Characters
 {
     public class CharactersRepository
     {
         private readonly List<Character> characters = new();
+
+        public void Register(Character character) => 
+            characters.Add(character);
+
+        public void Unregister(Character character)
+        {
+            if (characters.Contains(character))
+                characters.Remove(character);
+        }
+
+        public int ReadCapacity() => 
+            characters.Count;
 
         public bool HasEnemy(Character forCharacter)
         {
