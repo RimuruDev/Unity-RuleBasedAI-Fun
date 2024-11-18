@@ -70,3 +70,9 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+/Unity-RuleBasedAI-Fun/.idea
+/Unity-RuleBasedAI-Fun/Library
+/Unity-RuleBasedAI-Fun/Temp
+/Unity-RuleBasedAI-Fun/UserSettings
+/Unity-RuleBasedAI-Fun/Logs
+/Unity-RuleBasedAI-Fun/obj
