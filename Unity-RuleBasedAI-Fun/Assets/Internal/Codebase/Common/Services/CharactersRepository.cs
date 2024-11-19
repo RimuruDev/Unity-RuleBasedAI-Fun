@@ -1,14 +1,15 @@
 using System.Collections.Generic;
 using NUnit.Framework;
+using RimuruDev.Internal.Codebase.Common.Characters;
 using UnityEngine;
 
-namespace RimuruDev.Internal.Codebase.Common.Characters
+namespace RimuruDev.Internal.Codebase.Common.Services
 {
     public class CharactersRepository
     {
         private readonly List<Character> characters = new();
 
-        public void Register(Character character) => 
+        public void Register(Character character) =>
             characters.Add(character);
 
         public void Unregister(Character character)
@@ -17,7 +18,7 @@ namespace RimuruDev.Internal.Codebase.Common.Characters
                 characters.Remove(character);
         }
 
-        public int ReadCapacity() => 
+        public int ReadCapacity() =>
             characters.Count;
 
         public bool HasEnemy(Character forCharacter)

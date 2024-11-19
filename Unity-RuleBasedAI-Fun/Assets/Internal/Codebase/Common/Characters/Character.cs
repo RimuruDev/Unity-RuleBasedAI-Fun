@@ -1,8 +1,9 @@
+using RimuruDev.Internal.Codebase.Common.AI;
 using UnityEngine;
 
 namespace RimuruDev.Internal.Codebase.Common.Characters
 {
-    public class Character : MonoBehaviour
+    public class Character : MonoBehaviour, IActor
     {
         public bool HasEnemy => enemy is { IsAlive: true };
         public bool IsAlive { get; set; }
@@ -13,5 +14,9 @@ namespace RimuruDev.Internal.Codebase.Common.Characters
 
         public void AssignEnemy(Character targetEnemy) =>
             enemy = targetEnemy;
+
+        public void Update()
+        {
+        }
     }
 }
