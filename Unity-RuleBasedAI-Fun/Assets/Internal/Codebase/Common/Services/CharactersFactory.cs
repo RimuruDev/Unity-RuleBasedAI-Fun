@@ -7,7 +7,8 @@ namespace RimuruDev.Internal.Codebase.Common.Services
     {
         private const float SpawnRadius = 20f;
         private const string PathToCharacter = "Character";
-        
+        private const string CharacterRootTag = "Character/Root";
+
         private readonly CharactersRepository charactersRepository;
         private static float RandomRadius => Random.Range(SpawnRadius, -SpawnRadius);
 
@@ -17,16 +18,15 @@ namespace RimuruDev.Internal.Codebase.Common.Services
         public Character Create()
         {
             var prefab = Resources.Load<Character>(PathToCharacter);
+            var root = GameObject.FindGameObjectWithTag(CharacterRootTag)?.transform;
 
             var position = new Vector3(RandomRadius, 0f, RandomRadius);
 
-            var instance = Object.Instantiate(prefab, position, Quaternion.identity);
+            var instance = Object.Instantiate(prefab, position, Quaternion.identity, root);
 
             charactersRepository.Register(instance);
- 
+
             return instance;
         }
-        
-        
     }
 }

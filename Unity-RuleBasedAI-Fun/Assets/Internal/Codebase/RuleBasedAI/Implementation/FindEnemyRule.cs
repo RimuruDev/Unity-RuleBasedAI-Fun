@@ -1,3 +1,4 @@
+using RimuruDev.Internal.Codebase.Common.AI;
 using RimuruDev.Internal.Codebase.Common.Characters;
 using RimuruDev.Internal.Codebase.RuleBasedAI.Core;
 
@@ -21,5 +22,10 @@ namespace RimuruDev.Internal.Codebase.RuleBasedAI.Implementation
             var enemy = charactersRepository.GetClosestEnemy(character);
             character.AssignEnemy(enemy);
         }
+    }
+
+    public class RuleBasedAIFactory
+    {
+         
     }
 }
