@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace RimuruDev.Internal.Codebase.Common.Characters
 {
-    public class Character : MonoBehaviour, IActor
+    public class Character : MonoBehaviour, IAIActor
     {
         public bool HasEnemy => enemy is { IsAlive: true };
         public bool IsAlive { get; set; }

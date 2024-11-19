@@ -1,7 +1,9 @@
 {
     "name": "Project.Common",
     "rootNamespace": "RimuruDev",
-    "references": [],
+    "references": [
+        "GUID:e46df93fe11d844ababcbb6179d0209a"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

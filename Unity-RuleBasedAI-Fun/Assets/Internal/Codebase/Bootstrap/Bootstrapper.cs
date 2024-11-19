@@ -7,18 +7,19 @@ namespace RimuruDev.Internal.Codebase.Bootstrap
 {
     public class Bootstrapper : MonoBehaviour
     {
-        private ActorsRepository actorsRepository;
-        private CharactersRepository charactersRepository;
         private CharactersFactory characterFactory;
+        private CharactersRepository charactersRepository;
+
         private RuleBasedAIFactory ruleBasedFactory;
+        private ActorsRepository actorsRepository;
 
         private void Start()
         {
-            actorsRepository = new ActorsRepository();
+            characterFactory = new CharactersFactory();
             charactersRepository = new CharactersRepository();
 
-            characterFactory = new CharactersFactory();
-            ruleBasedFactory = new RuleBasedAIFactory(characterFactory, actorsRepository);
+            actorsRepository = new ActorsRepository();
+            ruleBasedFactory = new RuleBasedAIFactory(characterFactory, charactersRepository,actorsRepository);
         }
 
         private void Update()

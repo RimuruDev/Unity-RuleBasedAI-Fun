@@ -1,6 +1,6 @@
 namespace RimuruDev.Internal.Codebase.Common.AI
 {
-    public interface IActor
+    public interface IAIActor
     {
         public void Update();
     }

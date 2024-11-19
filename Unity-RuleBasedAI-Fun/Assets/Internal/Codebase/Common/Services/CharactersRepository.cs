@@ -1,11 +1,12 @@
 using System.Collections.Generic;
+using System.Linq;
 using NUnit.Framework;
 using RimuruDev.Internal.Codebase.Common.Characters;
 using UnityEngine;
 
 namespace RimuruDev.Internal.Codebase.Common.Services
 {
-    public class CharactersRepository
+    public class CharactersRepository : IRepository<Character>
     {
         private readonly List<Character> characters = new();
 
@@ -16,6 +17,14 @@ namespace RimuruDev.Internal.Codebase.Common.Services
         {
             if (characters.Contains(character))
                 characters.Remove(character);
+        }
+
+        public void UnregisterAll()
+        {
+            foreach (var actor in characters.ToList().Where(actor => characters.Contains(actor)))
+                characters.Remove(actor);
+
+            characters.Clear();
         }
 
         public int ReadCapacity() =>

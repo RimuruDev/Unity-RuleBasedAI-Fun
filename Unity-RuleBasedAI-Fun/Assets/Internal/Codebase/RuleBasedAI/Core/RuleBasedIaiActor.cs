@@ -2,11 +2,11 @@ using RimuruDev.Internal.Codebase.Common.AI;
 
 namespace RimuruDev.Internal.Codebase.RuleBasedAI.Core
 {
-    public class RuleBasedActor : IActor
+    public class RuleBasedIaiActor : IAIActor
     {
         private readonly IRule[] rules;
 
-        public RuleBasedActor(params IRule[] rules) =>
+        public RuleBasedIaiActor(params IRule[] rules) =>
             this.rules = rules;
 
         public void Update()

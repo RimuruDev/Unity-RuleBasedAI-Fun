@@ -4,7 +4,7 @@ using RimuruDev.Internal.Codebase.Common.Characters;
 
 namespace RimuruDev.Internal.Codebase.Common.Services
 {
-    public class CharactersFactory : IActorFactory
+    public class CharactersFactory
     {
         private const float SpawnRadius = 20f;
         private const string PathToCharacter = "Character";
@@ -12,7 +12,7 @@ namespace RimuruDev.Internal.Codebase.Common.Services
 
         private static float RandomRadius => Random.Range(SpawnRadius, -SpawnRadius);
 
-        public IActor Create()
+        public Character Create()
         {
             var prefab = Resources.Load<Character>(PathToCharacter);
             var root = GameObject.FindGameObjectWithTag(CharacterRootTag)?.transform;
