@@ -8,6 +8,7 @@ namespace RimuruDev.Internal.Codebase.Common.Services
 {
     public class CharactersRepository : IRepository<Character>
     {
+        public IEnumerable<Character> All => characters;
         private readonly List<Character> characters = new();
 
         public void Register(Character character) =>
