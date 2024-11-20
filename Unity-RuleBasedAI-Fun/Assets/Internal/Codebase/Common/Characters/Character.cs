@@ -10,6 +10,8 @@ namespace RimuruDev.Internal.Codebase.Common.Characters
         public Vector3 Position => transform.position;
         public int Team { get; private set; }
 
+        [SerializeField] private Attack attack;
+        [SerializeField] private Movement movement;
         private Character enemy;
 
         public void Constructor(int team)
@@ -25,5 +27,11 @@ namespace RimuruDev.Internal.Codebase.Common.Characters
         public void Update()
         {
         }
+
+        public bool CloseEnoughToAttack => 
+            Vector3.SqrMagnitude(Position - enemy.Position) <= Mathf.Pow(attack.AttackDistance, 2f );
+
+        public void MoveToEnemy() => 
+            movement.MoveTo(enemy.Position);
     }
 }

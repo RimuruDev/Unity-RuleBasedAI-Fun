@@ -25,7 +25,8 @@ namespace RimuruDev.Internal.Codebase.RuleBasedAi.Implementation
             var character = characterFactory.Create();
 
             var actor = new RuleBasedIaiActor(
-                new FindEnemyRule(character, charactersRepository)
+                new FindEnemy(character, charactersRepository),
+                new MoveToEnemy(character)
             );
 
             actorsRepository.Register(actor);

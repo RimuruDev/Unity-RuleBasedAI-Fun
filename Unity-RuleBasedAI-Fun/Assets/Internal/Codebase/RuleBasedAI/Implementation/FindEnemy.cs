@@ -4,14 +4,14 @@ using RimuruDev.Internal.Codebase.RuleBasedAi.Core;
 
 namespace RimuruDev.Internal.Codebase.RuleBasedAi.Implementation
 {
-    public class FindEnemyRule : IRule
+    public class FindEnemy : IRule
     {
         private readonly Character character;
         private readonly CharactersRepository charactersRepository;
 
         public bool CanExecute => !character.HasEnemy && charactersRepository.HasEnemy(character);
 
-        public FindEnemyRule(Character character, CharactersRepository charactersRepository)
+        public FindEnemy(Character character, CharactersRepository charactersRepository)
         {
             this.character = character;
             this.charactersRepository = charactersRepository;
