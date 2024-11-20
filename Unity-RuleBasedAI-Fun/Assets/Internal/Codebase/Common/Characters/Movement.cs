@@ -1,4 +1,5 @@
 using System;
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -8,9 +9,9 @@ namespace RimuruDev.Internal.Codebase.Common.Characters
     {
         [SerializeField] private NavMeshAgent navMeshAgent;
         [SerializeField] private float updatePathCooldown;
-        [SerializeField] private float currentCooldown;
+        [SerializeField, ReadOnly] private float currentCooldown;
 
-        private bool IsCooldown => currentCooldown <= 0f;
+        private bool IsCooldown => currentCooldown > 0f;
 
         private void Update() =>
             currentCooldown = Mathf.Max(currentCooldown - Time.deltaTime, 0f);

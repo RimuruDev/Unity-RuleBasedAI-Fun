@@ -6,7 +6,7 @@ namespace RimuruDev.Internal.Codebase.Common.Characters
     public class Character : MonoBehaviour, IAIActor
     {
         public bool HasEnemy => enemy is { IsAlive: true };
-        public bool IsAlive { get; set; }
+        public bool IsAlive { get; set; } = true; 
         public Vector3 Position => transform.position;
         public int Team { get; private set; }
 
