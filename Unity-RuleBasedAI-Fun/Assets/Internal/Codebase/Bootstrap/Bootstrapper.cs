@@ -1,6 +1,7 @@
 using System;
 using RimuruDev.Internal.Codebase.Common.Characters;
 using RimuruDev.Internal.Codebase.Common.Services;
+using RimuruDev.Internal.Codebase.RuleBasedAi.Implementation;
 using UnityEngine;
 
 namespace RimuruDev.Internal.Codebase.Bootstrap

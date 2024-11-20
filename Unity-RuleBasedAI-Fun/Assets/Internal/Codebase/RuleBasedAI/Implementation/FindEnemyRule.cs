@@ -1,8 +1,8 @@
 using RimuruDev.Internal.Codebase.Common.Characters;
 using RimuruDev.Internal.Codebase.Common.Services;
-using RimuruDev.Internal.Codebase.RuleBasedAI.Core;
+using RimuruDev.Internal.Codebase.RuleBasedAi.Core;
 
-namespace RimuruDev.Internal.Codebase.RuleBasedAI.Implementation
+namespace RimuruDev.Internal.Codebase.RuleBasedAi.Implementation
 {
     public class FindEnemyRule : IRule
     {

@@ -1,9 +1,8 @@
 using RimuruDev.Internal.Codebase.Common.AI;
-using RimuruDev.Internal.Codebase.Common.Characters;
-using RimuruDev.Internal.Codebase.RuleBasedAI.Core;
-using RimuruDev.Internal.Codebase.RuleBasedAI.Implementation;
+using RimuruDev.Internal.Codebase.Common.Services;
+using RimuruDev.Internal.Codebase.RuleBasedAi.Core;
 
-namespace RimuruDev.Internal.Codebase.Common.Services
+namespace RimuruDev.Internal.Codebase.RuleBasedAi.Implementation
 {
     public class RuleBasedAIFactory
     {

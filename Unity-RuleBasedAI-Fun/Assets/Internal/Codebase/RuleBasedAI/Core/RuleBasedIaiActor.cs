@@ -1,6 +1,6 @@
 using RimuruDev.Internal.Codebase.Common.AI;
 
-namespace RimuruDev.Internal.Codebase.RuleBasedAI.Core
+namespace RimuruDev.Internal.Codebase.RuleBasedAi.Core
 {
     public class RuleBasedIaiActor : IAIActor
     {
