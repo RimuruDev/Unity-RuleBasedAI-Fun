@@ -1,5 +1,3 @@
-using System;
-using RimuruDev.Internal.Codebase.Common.Characters;
 using RimuruDev.Internal.Codebase.Common.Services;
 using RimuruDev.Internal.Codebase.RuleBasedAi.Implementation;
 using UnityEngine;
@@ -16,11 +14,11 @@ namespace RimuruDev.Internal.Codebase.Bootstrap
 
         private void Start()
         {
-            characterFactory = new CharactersFactory();
             charactersRepository = new CharactersRepository();
+            characterFactory = new CharactersFactory(charactersRepository);
 
             actorsRepository = new ActorsRepository();
-            ruleBasedFactory = new RuleBasedAIFactory(characterFactory, charactersRepository,actorsRepository);
+            ruleBasedFactory = new RuleBasedAIFactory(characterFactory, charactersRepository, actorsRepository);
         }
 
         private void Update()
@@ -32,7 +30,7 @@ namespace RimuruDev.Internal.Codebase.Bootstrap
         [NaughtyAttributes.Button]
         private void CreateCharacter()
         {
-            characterFactory.Create();
+            ruleBasedFactory.Create();
         }
     }
 }
